@@ -8,11 +8,14 @@ from home import go
 from projects import project
 from udemy import get_udemy
 from test import call_test
+from ecommerc import get_ecommerc
+
+from pdffile import  Readpdf
 # from PIL import Image
 import base64
 
 with st.sidebar:
-    st.sidebar.image("Data/mypace.jpg", use_column_width=True )
+    st.sidebar.image("Data/mypace.jpg", use_column_width=True,width=150 )
 
 
     st.sidebar.info('''
@@ -27,10 +30,10 @@ with st.sidebar:
     selected=option_menu(
         
             menu_title="all_projects",
-            options=["web_Scrap","Data Analysis","Sentiment","NLP ","Open Cv ","Quran","Udemy","Schools_Deep","Tweeter","tiktok","Read PDF","test"],
-            icons=["person-check-fill","book","house","mouse","phone","folder-symlink-fill","list-task","megaphone-fill","twitter","tiktok","file-earmark-pdf-fill"],
+            options=["Home","ecommerce","web_Scrap","Data Analysis","Sentiment","NLP ","Open Cv ","Quran","Udemy","Schools_Deep","Tweeter","tiktok","Read PDF","test"],
+            icons=["house","bank2","person-check-fill","book","house","mouse","phone","folder-symlink-fill","list-task","megaphone-fill","twitter","tiktok","file-earmark-pdf-fill"],
             menu_icon="cast",
-            default_index=6,
+            default_index=0,
             orientation="vertical",
             styles={
         "container": {"padding": "0!important", "background-color": "#FCFAFA"},
@@ -40,20 +43,26 @@ with st.sidebar:
     }
 
     )   
-    if selected=='web_Scrap':
+    
+if selected=="Read PDF" :
+     Readpdf() 
+if selected=='web_Scrap':
         project()
-    
-    
-    
-    
-if selected=="web_Scrap":
+   
+       
+if selected=="Home":
     go()
-    
+
 if selected=='Udemy':
     get_udemy()
 if selected=='test':
     call_test()
-     
+
+if selected=='ecommerce':
+    get_ecommerc()
+    
+
+            
 
 st.sidebar.title("about me ")
 st.sidebar.info('''
