@@ -21,16 +21,16 @@ with st.sidebar:
                     * Email (onifsie@gmail.com)
                     * Server online activation 
                     * your working online Now ....
-                    * [my website ]("https://obeid.pro")
+                    * [my website ](https://obeid.pro)
                     ''')
 
     selected=option_menu(
         
             menu_title="all_projects",
             options=["web_Scrap","Data Analysis","Sentiment","NLP ","Open Cv ","Quran","Udemy","Schools_Deep","Tweeter","tiktok","Read PDF","test"],
-            icons=["person-check-fill","book","house","mouse","phone","folder-symlink-fill"],
+            icons=["person-check-fill","book","house","mouse","phone","folder-symlink-fill","list-task","megaphone-fill","twitter","tiktok","file-earmark-pdf-fill"],
             menu_icon="cast",
-            default_index=3,
+            default_index=6,
             orientation="vertical",
             styles={
         "container": {"padding": "0!important", "background-color": "#FCFAFA"},
