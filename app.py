@@ -7,13 +7,27 @@ from streamlit_option_menu import option_menu
 from home import go 
 from projects import project
 from udemy import get_udemy
-
+from test import call_test
+# from PIL import Image
+import base64
 
 with st.sidebar:
+    st.sidebar.image("Data/mypace.jpg", use_column_width=True )
+
+
+    st.sidebar.info('''
+                    
+
+                    * Email (onifsie@gmail.com)
+                    * Server online activation 
+                    * your working online Now ....
+                    * [my website ]("https://obeid.pro")
+                    ''')
+
     selected=option_menu(
         
             menu_title="all_projects",
-            options=["web_Scrap","Data Analysis","Sentiment","NLP ","Open Cv ","Quran","Udemy","Schools_Deep","Tweeter","tiktok"],
+            options=["web_Scrap","Data Analysis","Sentiment","NLP ","Open Cv ","Quran","Udemy","Schools_Deep","Tweeter","tiktok","Read PDF","test"],
             icons=["person-check-fill","book","house","mouse","phone","folder-symlink-fill"],
             menu_icon="cast",
             default_index=3,
@@ -35,9 +49,11 @@ with st.sidebar:
 if selected=="web_Scrap":
     go()
     
-if selected=='Scrap Udemy':
+if selected=='Udemy':
     get_udemy()
-   
+if selected=='test':
+    call_test()
+     
 
 st.sidebar.title("about me ")
 st.sidebar.info('''

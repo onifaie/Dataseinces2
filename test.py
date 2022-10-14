@@ -5,17 +5,16 @@ from tkinter.font import names
 import streamlit as st 
 import numpy as np 
 import pandas as pd 
-import plotly.express as px
+# import plotly.express as px
 from PIL import Image
-from matplotlib import pyplot 
+
 
 
 
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 
 
-
-def get_udemy():
+def call_test():
 
     data=pd.read_csv('Data/udemy_courses.csv')#, index_col=0)
 
@@ -49,11 +48,4 @@ def get_udemy():
     st.write(df=pd.DataFrame(selected)) #Pass the selected rows to a new dataframe df
     st.markdown("""- - - - """)
     st.line_chart(data[['subject','price']].head(10))
-    st.markdown('''_ _ _ ''')
-    
-    
-    
-    
-    dd=(data.groupby(by='subject').sum()).to_dict()
-    st.table(dd)
-    # st.plotly_chart(dd,x='subject',y='price')
+
