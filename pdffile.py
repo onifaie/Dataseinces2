@@ -9,6 +9,10 @@ import os
 
 
 def Readpdf():
+    audio_file = open('Data/sample4.wav', 'rb')
+    audio_bytes = audio_file.read()
+
+    st.audio(audio_bytes, format='audio/ogg')
     
 
     uploaded_pdf = st.file_uploader("Load pdf: ", type=['pdf'])
@@ -16,12 +20,20 @@ def Readpdf():
     pages=pdfReader.numPages
     speaker=pyttsx3.init()
     for num in range(0,pages):
-        page=pdfReader.getPage(8)
+        page=pdfReader.getPage(1)
         text=page.extractText()
         speaker.say(text)
         speaker.runAndWait()
         st.write(text)
-
+        # st.audio.stop(text)
+        
+ 
+    
+    
+def readSound(self,text):
+    speaker=pyttsx3.init()
+    speaker.stop(text)
+    
 
 
 

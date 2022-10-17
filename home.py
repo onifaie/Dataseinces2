@@ -1,11 +1,29 @@
+from enum import auto
 from turtle import width
 import streamlit as st
 import pandas as pd
 import datetime
 def go():
-    st.title(datetime.date.today())   
+   st.image("Data/2.jpg",width=400)
 
-    with st.expander("Information about me >>>"):
+   cm1,cm2=st.columns(2)
+   with cm1:
+      st.text('this some advaices for any one want to learn some thinks new')
+      audio_file = open('Data/sample4.wav', 'rb')
+      audio_bytes = audio_file.read()
+
+      st.audio(audio_bytes, format='audio/ogg')
+   with cm2:
+      st.text('this the better song for me ')
+      audio_file = open('Data/sample4.wav', 'rb')
+      audio_bytes = audio_file.read()
+
+      st.audio(audio_bytes, format='audio/ogg')
+   
+   
+      st.title(datetime.date.today())   
+
+   with st.expander("Information about me >>>"):
         st.write("""
            this page tell you how Scrap Udemy website 
            * Developer website [ Django - Python - Java Script]
@@ -36,7 +54,7 @@ def go():
             
             
     
-    with st.expander("Summary about all Projects "):
+   with st.expander("Summary about all Projects "):
         c1,c2,c3,c4=st.columns(4)
         # c1.st.image("https://www.cloudways.com/blog/wp-content/uploads/Ecommerce-Shopping-Infographics.png",width=100)
 

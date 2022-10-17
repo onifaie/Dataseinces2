@@ -13,9 +13,20 @@ from ecommerc import get_ecommerc
 from pdffile import  Readpdf
 # from PIL import Image
 import base64
+st.set_page_config(
+    page_title="Ex-stream-ly Cool App",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+    menu_items={
+        'Get Help': "https://obeid.pro",
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# this my all_project Dara Sceinces !"
+    }
+)
 
 with st.sidebar:
-    st.sidebar.image("Data/mypace.jpg", use_column_width=True,width=150 )
+    st.sidebar.image("Data/mypace.jpg", width=400,use_column_width=True,)
 
 
     st.sidebar.info('''

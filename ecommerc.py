@@ -1,6 +1,7 @@
 import datetime
 from email.utils import collapse_rfc2231_value
 from functools import cache
+from sqlite3 import Row
 from tkinter.font import names
 import streamlit as st 
 import numpy as np 
@@ -12,7 +13,7 @@ from matplotlib import pyplot
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 
 
-    
+# @st.cache
 def get_ecommerc():
     st.subheader(' Ecommerc Project many skills can you find here ')
     with st.expander("Information About Project"):
@@ -28,13 +29,19 @@ def get_ecommerc():
         st.image("https://www.usnews.com/dims4/USNEWS/305c384/2147483647/thumbnail/970x647/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2F38%2Fe6%2F58c88e3c4d2e9dd1a7055521da7f%2F201016-udemy-stock.png",width=150)
         
  
-
+    #Quantity , UnitPrice 
         
     # this section about Tabs 
  
 
-    data=pd.read_csv('Data/data-2.csv')#, index_col=0)
-
+    data=pd.read_csv('Data/data-2.csv',nrows=50)#, index_col=0)
+    # data['total']=data[('UnitPrice' )*('Quantity')]
+    # st.text(data.shape())
+    # st.map(data['Country'])
+    
+    st.write(data.shape)
+    # st.write(data.dtypes)
+#Country
     st.markdown('''_ _ _ ''')
     # st.write(AgGrid(data))
     col1 , col2 =st.columns(2)
