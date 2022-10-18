@@ -10,7 +10,7 @@ from PIL import Image
 import  matplotlib.pyplot as plt 
 # import random
 import random
-
+from gb import get_Tabls
 
 
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
@@ -102,8 +102,7 @@ def get_udemy():
 
                 ''')
     st.bar_chart(a)
-    return title 
-
+    # return title 
 
 
 
@@ -217,3 +216,5 @@ def get_udemy():
             
             '''          
             )
+    
+    st.write(get_Tabls(m))
