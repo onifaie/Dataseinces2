@@ -37,11 +37,8 @@ def get_ecommerc():
     # this section about Tabs 
  
 
-<<<<<<< HEAD
     data=pd.read_csv('Data/data-2.csv')#, index_col=0)
-=======
     data=pd.read_csv('Data/data-2.csv',nrows=50)#, index_col=0)
->>>>>>> 9664e2dda39284a84ea46c40c61743381d51a56e
     # data['total']=data[('UnitPrice' )*('Quantity')]
     # st.text(data.shape())
     # st.map(data['Country'])

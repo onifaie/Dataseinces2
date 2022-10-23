@@ -87,7 +87,7 @@ def get_udemy():
     st.write(m.loc[m.subject=='Business Finance',['price','content_duration','course_title','level','subject','total','Randon']])
     st.subheader('this Dara Frame if price == 50 and content_duration <100')
     st.write(m.query('price == 50 and content_duration < 50'))
-<<<<<<< HEAD
+
     # dd=(data.groupby(by='subject').sum()).to_dict()
     # st.table(dd)
     # st.plotly_chart(dd,x='subject',y='price')
@@ -225,7 +225,7 @@ def get_udemy():
     st.write(p)
 
    
-=======
+
     # dd=(data.groupby(by='subject').sum()).to_dict()
     # st.table(dd)
     # st.plotly_chart(dd,x='subject',y='price')
@@ -357,4 +357,3 @@ def get_udemy():
             )
     
     st.write(get_Tabls(m))
->>>>>>> 9664e2dda39284a84ea46c40c61743381d51a56e
