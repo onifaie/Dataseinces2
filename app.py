@@ -11,6 +11,8 @@ from test import call_test
 from ecommerc import get_ecommerc
 
 from pdffile import  Readpdf
+
+from teacher import teacher
 # from PIL import Image
 import base64
 st.set_page_config(
@@ -54,7 +56,8 @@ with st.sidebar:
     }
 
     )   
-    
+if selected=="Schools_Deep":
+    teacher()
 if selected=="Read PDF" :
      Readpdf() 
 if selected=='web_Scrap':
